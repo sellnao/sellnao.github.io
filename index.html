@@ -44,5 +44,40 @@
         <small>© 2025 sellnao · Built with ❤️ and GitHub Pages</small>
       </div>
     </footer>
+
+    <script>
+      // 应用路由映射表
+      const appRoutes = {
+        'ghostseeker': 'https://apps.apple.com/us/app/ghost-seeker-puzzle-2/id6753914192'
+      };
+
+      // 客户端路由逻辑
+      (function() {
+        const pathname = window.location.pathname;
+        
+        // 移除前导/和末尾/
+        const path = pathname.replace(/^\/|\/$/g, '');
+        
+        // 如果路径为空或是 index.html，显示主页（无需重定向）
+        if (!path || path === 'index.html') {
+          return;
+        }
+        
+        // 检查路径是否在应用映射表中
+        if (appRoutes[path]) {
+          // 直接跳转到 App Store 链接
+          window.location.replace(appRoutes[path]);
+        } else {
+          // 不存在的路由，显示友好的错误提示
+          document.body.innerHTML = `
+            <div style="text-align: center; padding: 3rem 1rem; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #e6eef6;">
+              <h1>404 - 应用未找到</h1>
+              <p>抱歉，应用 "<strong>${path}</strong>" 不存在。</p>
+              <p><a href="/" style="color: #5eead4; text-decoration: none;">← 返回主页</a></p>
+            </div>
+          `;
+        }
+      })();
+    </script>
   </body>
 </html>
