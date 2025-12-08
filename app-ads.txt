@@ -1,4 +1,4 @@
-inmobi.com, 377d207595b04d2caee62ebfe9bd5b7a, DIRECT, 83e75a7ae333ca9d
+inmobi.com, 077c3f8db8994da380254c5479e2ebd5, DIRECT, 83e75a7ae333ca9d
 rubiconproject.com, 11726, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 12266, RESELLER, 0bfd66d529a55807
 mintegral.com, 10003, RESELLER
